@@ -6,3 +6,4 @@ The repository contains the following patterns implementations in C#:
 
 * Creational patterns
  * Singleton
+ * FactoryMethod
