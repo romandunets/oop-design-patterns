@@ -1,17 +1,20 @@
 ﻿using System;
 
-class Singleton
+namespace Program
 {
-    private static readonly Singleton instance = new Singleton();
-
-    public static Singleton Instance
+    class Singleton
     {
-        get 
-        {
-            return instance;
-        }
-    }
+        private static readonly Singleton instance = new Singleton();
 
-    protected Singleton()
-    { }
+        public static Singleton Instance
+        {
+            get
+            {
+                return instance;
+            }
+        }
+
+        protected Singleton()
+        { }
+    }
 }
