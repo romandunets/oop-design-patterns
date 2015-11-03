@@ -1,6 +1,6 @@
 ﻿using System;
 
-public abstract class AbstractFactory
+public abstract class AbstractCreator
 {
     protected abstract IProduct CreateProduct();
 
@@ -10,19 +10,19 @@ public abstract class AbstractFactory
     }
 }
 
-public class ConcreteFactory1 : AbstractFactory
+public class ConcreteCreatorA : AbstractCreator
 {
     protected override IProduct CreateProduct()
     {
-        return new ConcreteProduct1();
+        return new ConcreteProductA();
     }
 }
 
-public class ConcreteFactory2 : AbstractFactory
+public class ConcreteCreatorB : AbstractCreator
 {
     protected override IProduct CreateProduct()
     {
-        return new ConcreteProduct2();
+        return new ConcreteProductB();
     }
 }
 
@@ -31,18 +31,18 @@ public interface IProduct
     void Launch();
 }
 
-public class ConcreteProduct1 : IProduct
+public class ConcreteProductA : IProduct
 {
     public void Launch()
     {
-        Console.WriteLine("Launch Product 1");
+        Console.WriteLine("Launch Product A");
     }
 }
 
-public class ConcreteProduct2 : IProduct
+public class ConcreteProductB : IProduct
 {
     public void Launch()
     {
-        Console.WriteLine("Launch Product 2");
+        Console.WriteLine("Launch Product B");
     }
 }
