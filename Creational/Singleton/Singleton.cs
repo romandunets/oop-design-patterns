@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Program
+namespace SingletonPattern
 {
-    class Singleton
+    public class Singleton
     {
         private static readonly Singleton instance = new Singleton();
 

@@ -1,5 +1,5 @@
-﻿using Program;
-using System;
+﻿using System;
+using SingletonPattern;
 
 namespace Application
 {
@@ -14,6 +14,7 @@ namespace Application
             {
                 Console.WriteLine("Both refereces links to one object");
             }
+
             Console.Read();
         }
     }
