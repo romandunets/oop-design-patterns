@@ -1,48 +1,51 @@
 ﻿using System;
 
-public abstract class AbstractCreator
+namespace FactoryMethod
 {
-    protected abstract IProduct CreateProduct();
-
-    public IProduct FactoryMethod()
+    public abstract class AbstractCreator
     {
-        return this.CreateProduct();
+        protected abstract IProduct CreateProduct();
+
+        public IProduct FactoryMethod()
+        {
+            return this.CreateProduct();
+        }
     }
-}
 
-public class ConcreteCreatorA : AbstractCreator
-{
-    protected override IProduct CreateProduct()
+    public class ConcreteCreatorA : AbstractCreator
     {
-        return new ConcreteProductA();
+        protected override IProduct CreateProduct()
+        {
+            return new ConcreteProductA();
+        }
     }
-}
 
-public class ConcreteCreatorB : AbstractCreator
-{
-    protected override IProduct CreateProduct()
+    public class ConcreteCreatorB : AbstractCreator
     {
-        return new ConcreteProductB();
+        protected override IProduct CreateProduct()
+        {
+            return new ConcreteProductB();
+        }
     }
-}
 
-public interface IProduct
-{
-    void Launch();
-}
-
-public class ConcreteProductA : IProduct
-{
-    public void Launch()
+    public interface IProduct
     {
-        Console.WriteLine("Launch Product A");
+        void Launch();
     }
-}
 
-public class ConcreteProductB : IProduct
-{
-    public void Launch()
+    public class ConcreteProductA : IProduct
     {
-        Console.WriteLine("Launch Product B");
+        public void Launch()
+        {
+            Console.WriteLine("Launch Product A");
+        }
+    }
+
+    public class ConcreteProductB : IProduct
+    {
+        public void Launch()
+        {
+            Console.WriteLine("Launch Product B");
+        }
     }
 }
