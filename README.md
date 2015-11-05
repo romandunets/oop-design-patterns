@@ -8,3 +8,4 @@ The repository contains the following patterns implementations in C# with exampl
  * Singleton
  * Factory Method
  * Abstract Factory
+ * Builder
