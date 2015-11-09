@@ -9,3 +9,4 @@ The repository contains the following patterns implementations in C# with exampl
  * Factory Method
  * Abstract Factory
  * Builder
+ * Prototype
