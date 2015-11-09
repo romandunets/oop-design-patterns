@@ -2,50 +2,42 @@
 
 namespace Prototype
 {
-    public interface IPrototype
+    public abstract class AbstractPrototype
     {
-        String Id { get; set; }
-        String GetId();
-        IPrototype Clone();
+        protected string id;
+
+        public AbstractPrototype(string id)
+        {
+            this.id = id;
+        }
+
+        public string GetId()
+        {
+            return this.id;
+        }
+
+        public abstract AbstractPrototype Clone();
     }
 
-    public class ConcretePrototype1 : IPrototype
+    public class ConcretePrototype1 : AbstractPrototype
     {
-        public String Id { get; set; }
+        public ConcretePrototype1(String id) : base(id)
+        { }
 
-        public ConcretePrototype1(String id)
+        public override AbstractPrototype Clone()
         {
-            this.Id = id;
-        }
-
-        public String GetId()
-        {
-            return this.Id;
-        }
-
-        public IPrototype Clone()
-        {
-            return (IPrototype) this.MemberwiseClone();
+            return (AbstractPrototype) this.MemberwiseClone();
         }
     }
 
-    public class ConcretePrototype2 : IPrototype
+    public class ConcretePrototype2 : AbstractPrototype
     {
-        public String Id { get; set; }
+        public ConcretePrototype2(String id) : base(id)
+        { }
 
-        public ConcretePrototype2(String id)
+        public override AbstractPrototype Clone()
         {
-            this.Id = id;
-        }
-
-        public String GetId()
-        {
-            return this.Id;
-        }
-
-        public IPrototype Clone()
-        {
-            return (IPrototype) this.MemberwiseClone();
+            return (AbstractPrototype) this.MemberwiseClone();
         }
     }
 }
