@@ -10,3 +10,6 @@ The repository contains the following patterns implementations in C# with exampl
  * Abstract Factory
  * Builder
  * Prototype
+
+* Structural
+ * ChainOfResponsibility
