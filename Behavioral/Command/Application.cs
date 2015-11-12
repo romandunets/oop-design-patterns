@@ -9,6 +9,8 @@ namespace Application
         {
             Client client = new Client();
             client.Launch();
+
+            Console.Read();
         }
     }
 }
