@@ -2,42 +2,50 @@
 
 namespace Command
 {
-    class Client
+    public class Client
     {
         public void Launch()
         {
+            Receiver receiver = new Receiver();
+            AbstractCommand command = new ConcreteCommand(receiver);
             Invoker invoker = new Invoker();
+
+            invoker.command = command;
             invoker.Action();
         }
     }
 
-    class Invoker
+    public class Invoker
     {
-        ICommand command;
+        public AbstractCommand command { get; set; }
 
         public void Action()
         {
-            command = new ConcreteCommand();
             command.Execute();
         }
     }
 
-    interface ICommand
+    public class Receiver
     {
-        void Execute();
+        public void Action()
+        {
+            Console.WriteLine("Some action...");
+        }
     }
 
-    class ConcreteCommand : ICommand
+    public class ConcreteCommand : AbstractCommand
     {
-        private Receiver receiver = new Receiver();
-        private String state = "free";
+        protected string state = "free";
 
-        public String State
+        public ConcreteCommand(Receiver receiver) : base(receiver)
+        { }
+
+        public string State
         {
             get { return this.state; }
         }
 
-        public void Execute()
+        public override void Execute()
         {
             state = "busy";
             receiver.Action();
@@ -45,11 +53,15 @@ namespace Command
         }
     }
 
-    class Receiver
+    public abstract class AbstractCommand
     {
-        public void Action()
+        protected Receiver receiver;
+
+        public AbstractCommand(Receiver receiver)
         {
-            Console.WriteLine("Some action...");
+            this.receiver = receiver;
         }
+
+        public abstract void Execute();
     }
 }
