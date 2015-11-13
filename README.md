@@ -11,6 +11,7 @@ The repository contains the following patterns implementations in C# with exampl
  * Builder
  * Prototype
 
-* Structural
+* Behavioral
  * ChainOfResponsibility
  * Command
+ * Interpreter
