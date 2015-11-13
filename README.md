@@ -4,7 +4,7 @@ This repository contains examples of Object Oriented Programming Design Patterns
 
 The repository contains the following patterns implementations in C# with example how to use them:
 
-* Creational patterns
+* Creational
  * Singleton
  * Factory Method
  * Abstract Factory
@@ -15,3 +15,4 @@ The repository contains the following patterns implementations in C# with exampl
  * ChainOfResponsibility
  * Command
  * Interpreter
+ * Iterator
