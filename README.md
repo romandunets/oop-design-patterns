@@ -16,3 +16,4 @@ The repository contains the following patterns implementations in C# with exampl
  * Command
  * Interpreter
  * Iterator
+ * Mediator
