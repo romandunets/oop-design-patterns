@@ -18,3 +18,4 @@ The repository contains the following patterns implementations in C# with exampl
  * Iterator
  * Mediator
  * Memento
+ * Observer
