@@ -19,3 +19,4 @@ The repository contains the following patterns implementations in C# with exampl
  * Mediator
  * Memento
  * Observer
+ * State
