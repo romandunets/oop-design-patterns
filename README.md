@@ -20,3 +20,4 @@ The repository contains the following patterns implementations in C# with exampl
  * Memento
  * Observer
  * State
+ * Strategy
