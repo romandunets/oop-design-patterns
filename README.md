@@ -14,6 +14,7 @@ The repository contains the following patterns implementations in C# with exampl
 * Structural
  * Adapter
  * Bridge
+ * Composite
 
 * Behavioral
  * ChainOfResponsibility
