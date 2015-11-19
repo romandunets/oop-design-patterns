@@ -16,6 +16,7 @@ The repository contains the following patterns implementations in C# with exampl
  * Bridge
  * Composite
  * Decorator
+ * Facade
 
 * Behavioral
  * ChainOfResponsibility
