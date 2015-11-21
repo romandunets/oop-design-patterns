@@ -1,8 +1,10 @@
 Object Oriented Programming Design Patterns
 ==========
-This repository contains examples of Object Oriented Programming Design Patterns. Here are provided custom implementations for problems and solutions described in "Design Patterns: Elements of Reusable Object-Oriented Software" written by Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides with a foreword by Grady Booch.
+This repository contains examples of object-oriented programming design patterns in C#. Here are provided custom implementations for 23 software pattern solutions described in "Design Patterns: Elements of Reusable Object-Oriented Software" book written by Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides.
 
-The repository contains the following patterns implementations in C# with examples how to use them:
+The aim of this repository is to demonstrate the benefits of using design patterns and show how to use them.
+
+## Patterns covered
 
 * Creational
  * Abstract Factory
